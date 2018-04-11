@@ -1,5 +1,5 @@
-
-console.log('Module loaded')
+import stringTween from 'string-tween'
+import numberTween from './number-tween'
 
 export default function(){
 	const def = {
