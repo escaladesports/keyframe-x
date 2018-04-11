@@ -16,6 +16,10 @@ function tween(from, to){
 	return tweenArray(from, to)
 }
 
-
-
-export default tween
+export {
+	tween,
+	tweenString,
+	tweenNumber,
+	tweenObject,
+	tweenArray,
+}

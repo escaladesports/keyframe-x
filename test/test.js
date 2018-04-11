@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import tween from '../src'
+import { tween } from '../src'
 
 describe('Object tween', () => {
 	it('Should tween a number', () => {
@@ -12,7 +12,9 @@ describe('Object tween', () => {
 			[50, -50, 0],
 		]
 		tests.forEach(nums => {
-			expect(tween(nums[0], nums[1])(.5)).to.equal(nums[2])
+			expect(
+				tween(nums[0], nums[1])(.5)
+			).to.equal(nums[2])
 		})
 	})
 
@@ -22,33 +24,29 @@ describe('Object tween', () => {
 	})
 
 	it('Should deep tween an object', () => {
-		const from = {
+		const state = tween({
 			a: 0,
 			hundred: {
 				c: 100,
 			}
-		}
-		const to = {
+		}, {
 			a: 100,
 			hundred: {
 				c: 200,
 			}
-		}
-		const state = tween(from, to)(.5)
+		})(.5)
 		expect(state.a).to.equal(50)
 		expect(state.hundred.c).to.equal(150)
 	})
 
 	it('Should deep tween an array', () => {
-		const from = [
-			[ 0 ],
+		const state = tween([
+			[0],
 			100
-		]
-		const to = [
-			[ 100 ],
+		], [
+			[100],
 			0
-		]
-		const state = tween(from, to)(.5)
+		])(.5)
 		expect(state[0][0]).to.equal(50)
 		expect(state[1]).to.equal(50)
 	})
