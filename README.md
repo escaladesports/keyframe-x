@@ -1,25 +1,49 @@
-# JavaScript Module Boilerplate
+# Tween X
 
-A simple JavaScript boilerplate that outputs to ES5 and ES6.
+A super small library for tweening numbers, strings, objects, and arrays. Also tweens deep objects and arrays.
 
-## Getting started
+## Installation
+
+With npm:
 
 ```bash
-git clone git@github.com:escaladesports/javascript-module-boilerplate.git --depth=1 your-module
-cd your-module
-yarn
-yarn reset
+npm install --save tween-x
 ```
 
-Also make sure to edit the `package.json` file with a new name, version number, author, and anything else you might need.
+Or with Yarn:
+
+```bash
+yarn add tween-x
+```
 
 ## Usage
 
-- `yarn build`: Build browser and node versions of the module
-- `yarn dev`: Run live dev mode
-- `yarn test`: Run mocha tests
-- `yarn analyze`: View bundle sizes
+```javascript
+import { tween } from 'tween-x'
 
-# Unit Testing
+// Tween a number
+let numTween = tween(0, 100)
+console.log(numTween(.25)) // 25
 
-Unit tests will be performed pre-commit and pre-publish. You can change this in the npm scripts if this doesn't work well with your use case.
+// Tween a string
+let stringTween = tween('translateX(0%)', 'translateX(50%)')
+console.log(stringTween(.5)) // translateX(25%)
+
+// Tween an object
+let objectTween = tween({
+	left: 100,
+	top: 30
+}, {
+	left: 0,
+	top: -30
+})
+console.log(objectTween(.75))
+
+// Tween an array
+let arrayTween = tween([
+	0, 1
+], [
+	30, 9
+])
+console.log(arrayTween(.1))
+```
