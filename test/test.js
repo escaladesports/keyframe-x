@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import objectTween from '../src/object-tween'
+import objectTween from '../src'
 
 describe('Object tween', () => {
 	it('Should deep tween an object', () => {
@@ -36,6 +36,7 @@ describe('Object tween', () => {
 		expect(state.negative.e).to.equal(0)
 		expect(state.negative.f).to.equal(0)
 	})
+
 	it('Should deep tween an array', () => {
 		const from = [
 			[ 0 ],

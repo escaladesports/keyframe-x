@@ -1,13 +1,21 @@
-import stringTween from 'string-tween'
-import numberTween from './number-tween'
+import tweenString from 'string-tween'
+import tweenNumber from './tween-number'
+import tweenObject from './tween-object'
+import tweenArray from './tween-array'
 
-export default function(){
-	const def = {
-		test: '123'
+function tween(from, to){
+	switch(typeof from){
+		case 'number':
+			return tweenNumber(from, to)
+		case 'string':
+			return tweenString(from, to)
 	}
-	const obj = {
-		anotherTest: 'abc',
-		...def,
+	if(!Array.isArray(from)){
+		return tweenObject(from, to)
 	}
-	return obj
+	return tweenArray(from, to)
 }
+
+
+
+export default tween
