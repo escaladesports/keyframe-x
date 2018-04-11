@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { tween } from '../src'
+import { tween } from '../dist'
 
 describe('Object tween', () => {
 	it('Should tween a number', () => {

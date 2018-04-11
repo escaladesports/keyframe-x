@@ -24,7 +24,7 @@
     "dev": "esca-scripts dev ---input './dev/dev.js, ./dev/index.html' --browser",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
-    "test": "esca-scripts test",
+    "test": "npm run build && esca-scripts test",
     "travis": "opn https://travis-ci.org/escaladesports/tween-x/branches"
   },
   "devDependencies": {
