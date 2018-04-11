@@ -31,19 +31,19 @@ console.log(stringTween(.5)) // translateX(25%)
 
 // Tween an object
 let objectTween = tween({
-	left: 100,
-	top: 30
+   left: 100,
+   top: 30
 }, {
-	left: 0,
-	top: -30
+   left: 0,
+   top: -30
 })
 console.log(objectTween(.75))
 
 // Tween an array
 let arrayTween = tween([
-	0, 1
+   0, 1
 ], [
-	30, 9
+   30, 9
 ])
 console.log(arrayTween(.1))
 ```
