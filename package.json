@@ -1,14 +1,14 @@
 {
   "name": "tween-x",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "keywords": [
     "tween",
     "animate",
     "object",
-	 "array",
-	 "deep",
-	 "number",
-	 "string"
+    "array",
+    "deep",
+    "number",
+    "string"
   ],
   "main": "dist/index.js",
   "browser": "dist-browser/index.js",
