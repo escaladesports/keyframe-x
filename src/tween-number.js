@@ -1,7 +1,7 @@
 function numberTween(from, to){
-	const diff = to + from
+	const diff = to - from
 	return function(t){
-		return t * diff
+		return from + (t * diff)
 	}
 }
 

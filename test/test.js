@@ -2,6 +2,36 @@ import { expect } from 'chai'
 import { tween } from '../dist'
 
 describe('Object tween', () => {
+	it('Should start tween at "from"', () => {
+		expect(
+			tween(100, 200)(0)
+		).to.equal(100)
+	})
+	it('Should stop at middle', () => {
+		expect(
+			tween(100, 200)(.5)
+		).to.equal(150)
+	})
+	it('Should end tween at "to"', () => {
+		expect(
+			tween(100, 200)(1)
+		).to.equal(200)
+	})
+	it('Should start tween at "from" backwards', () => {
+		expect(
+			tween(200, 100)(0)
+		).to.equal(200)
+	})
+	it('Should stop at middle backwards', () => {
+		expect(
+			tween(200, 100)(.5)
+		).to.equal(150)
+	})
+	it('Should end tween at "to" backwards', () => {
+		expect(
+			tween(200, 100)(1)
+		).to.equal(100)
+	})
 	it('Should tween a number', () => {
 		const tests = [
 			[0, 100, 50],
