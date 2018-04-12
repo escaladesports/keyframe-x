@@ -1,4 +1,4 @@
-# Tween X
+# Keyframe X
 
 A super small library for tweening numbers, strings, objects, and arrays. Also tweens deep objects and arrays.
 
@@ -7,19 +7,19 @@ A super small library for tweening numbers, strings, objects, and arrays. Also t
 With npm:
 
 ```bash
-npm install --save tween-x
+npm install --save keyframe-x
 ```
 
 Or with Yarn:
 
 ```bash
-yarn add tween-x
+yarn add keyframe-x
 ```
 
 ## Usage
 
 ```javascript
-import { tween } from 'tween-x'
+import { tween } from 'keyframe-x'
 
 // Tween a number
 let numTween = tween(0, 100)
